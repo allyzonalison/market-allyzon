@@ -1,5 +1,5 @@
 # market-allyzon
-Ecommerce with Django in the Backend
+Ecommerce with Django in the Backend (Everything Designed and Coded from scratch)
 
 ![Image Description](1.jpg)
 
