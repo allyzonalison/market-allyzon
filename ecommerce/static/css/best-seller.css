@@ -1,0 +1,144 @@
+.best-sellers-box {
+    padding: 5rem 8rem;
+    width: 70%;
+    margin: 0 auto;
+    background-color: #FFFCF2;
+    margin-top: 5rem;
+}
+
+.best-seller-title {
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: #444;
+    line-height: 1.2;
+}
+
+.best-seller-desc {
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+}
+
+.best-seller-product-container {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    row-gap: 5rem;
+    column-gap: 2rem;
+}
+
+.best-main-product-box {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-img-best {
+    width: 100%;
+}
+
+.product-bott {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 70% 30%;
+    padding: 1rem;
+}
+
+.product-bott p {
+    grid-column: 1 / 2;
+}
+
+.product-bott .product-add-to-cart-icon {
+    grid-column: 2 / 3;
+    grid-row: 2 / -2;
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 50%;
+    color: #5c441a;
+    background-color: #EBCAA3;
+}
+
+.product-name-best {
+    font-size: 1.4rem;
+}
+
+.product-price-best {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.btn-shop-more {
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 35px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: #5c441a;
+    background-color: #CBEACB;
+    padding: 1rem 3rem;
+    font-size: 2.0rem;
+}
+
+.btn-shop-more-box-best {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / -1;
+}
+
+/* ABOUT FOOTER SECTION */
+.about-footer-box {
+    width: 170rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5rem auto;
+    padding-top: 5rem;
+}
+
+.left-footer {
+    justify-self: center;
+    width: 40%;
+}
+
+.left-footer p {
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+.left-footer .logo {
+    font-size: 3rem;
+    line-height: 3;
+}
+
+.right-footer {
+    justify-self: center;
+    width: 40%;
+}
+
+.right-footer li {
+    list-style: none;
+    line-height: 3;
+    font-size: 1.6rem;
+}
+
+.footer {
+    background-color: #FFF4E7;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: #B6B6B6;
+}
+

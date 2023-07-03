@@ -1,0 +1,34 @@
+
+.about-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    height: 50rem;
+    margin: 25rem auto;
+}
+
+.left-about-container {
+    background-color: #FFF4E7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-about-container {
+    background-color: #CBEACB;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-heading {
+    font-size: 4rem;
+}
+
+.about-desc {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 2rem;
+}

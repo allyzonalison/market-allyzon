@@ -1,0 +1,43 @@
+{% extends 'store/main.html' %}
+
+{% load static %}
+
+{% block content %}
+        <section class="section-category">
+            <div class="category-box">
+                <div class="vegetables-box">
+                    <img src="{% static 'img/products-img/veggies-category.png' %}" class="category-img veggies-img">
+                    <div class="overlay">VEGETABLES</div>
+                </div>
+                <div class="fruits-box">
+                    <img src="{% static 'img/products-img/fruits-category.png' %}" class="category-img fruits-img">
+                    <div class="overlay">FRUITS</div>
+                </div>
+                <div class="salad-box">
+                    <img src="{% static 'img/products-img/salad-category.png' %}" class="category-img salads-img">
+                    <div class="overlay">SALADS</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-all-products">
+            <div class="all-products-container">
+                <p class="shop-all-title">Shop All</p>
+                <div class="main-all-products">
+                    
+                <!--PRODUCT BLOCK CONTENT -->   
+                {% for product in products %}
+                        <div class="main-product-box">
+                            <img id="product-img" src="{{product.image.url}}">
+                            <div class="product-bott">
+                                <p class="product-name">{{product.name}}</p>
+                                <p class="product-price">Php {{product.price|floatformat:2}}</p>
+                                <ion-icon class="product-add-to-cart-icon update-cart" data-product="{{product.id}}" data-action="add" name="cart-outline"></ion-icon>
+                            </div>
+                        </div>
+                {% endfor %}
+
+                </div>
+            </div>
+        </section>
+{% endblock content %}

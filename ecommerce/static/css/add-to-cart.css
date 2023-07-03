@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+}
+
+.cart-main-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    width: 80%;
+    margin: 15rem auto;
+    gap: 2rem;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 5rem;
+    background-color: #FFFCF2;
+}
+
+.btn-back {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.btn-sort {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 1.4rem;
+}
+
+/* .icon-class {
+    width: 3rem;
+    height: 3rem;
+} */
+
+.items-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.product-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 3rem;
+}
+
+.product-img {
+    width: 11rem;
+}
+
+.product-name {
+    font-size: 1.8rem;
+}
+
+.quantity-box {
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-box p {
+    font-size: 2rem;
+}
+
+.btn-quantity-adjust {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.right-container {
+    padding: 5rem;
+    background-color: #CBEACB;
+
+    height: 30rem;
+
+    display: grid;
+}
+
+.quantity-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+}
+
+.total-amount-box {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.btn-checkout {
+    border: none;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #8D703D;
+    gap: .75rem;
+    width: 60%;
+    height: 6rem;
+    align-self: flex-end;
+    justify-self: end;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.product-add-to-cart-icon {
+    cursor: pointer;
+}
+

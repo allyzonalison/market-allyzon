@@ -1,0 +1,90 @@
+{% extends 'store/main.html' %}
+
+{% load static %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/queries.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,500&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script defer src="{% static 'js/checkout.js' %}"></script>
+    <title>Checkout</title>
+</head>
+<body> -->
+
+{% block content %}
+    <section class="main-section">
+        <div class="main-container">
+            <div class="left-container">
+                <div class="btn-back">
+                    <ion-icon class="icon-class" name="chevron-back-outline"></ion-icon>
+                    <p>Back to Cart</p>
+                </div>
+
+                <div class="first-inputs">
+                    <input type="text" placeholder="Full Name">
+                    <input type="text" placeholder="Email">
+                </div>
+
+                <p class="shipping-information">Shipping Information</p>
+
+                <div id="shipping-info">
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="State">
+                    <input type="text" placeholder="Country">
+                    <input type="text" placeholder="Zip Code">
+                </div>
+
+                <p class="payment-options">Payment Options</p>
+
+                <div class="payment-options-box">
+                    <button class="btn btn-paypal">Paypal</button>
+                    <button class="btn btn-card">Debit or Credit Card</button>
+                </div>
+
+            </div>
+            <div class="right-container">
+                <p class="quantity">Quantity: {{order.get_cart_items}}</p>
+                <p class="total-amount">Total: Php {{order.get_cart_total|floatformat:2}}</p>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        var shipping = '{{order.shipping}}'
+    
+        if(shipping == 'False') {
+            document.getElementById('shipping-info').innerHTML = ''
+        }
+
+        const btn_paypal = document.querySelector('.btn-paypal');
+        const btn_card =  document.querySelector('.btn-card');
+
+        btn_paypal.addEventListener('click', function(e) {
+            submitFormData();
+        });
+
+        btn_card.addEventListener('click', function(e) {
+            submitFormData();
+        });        
+
+        function submitFormData() {
+            console.log('Payment button clicked');
+        }
+    </script>
+    
+{% endblock content %}
+<!-- </body>
+</html> -->

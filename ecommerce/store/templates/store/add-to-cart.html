@@ -1,0 +1,59 @@
+{% extends 'store/main.html' %}
+
+{% load static %}
+
+
+{% block content %}
+    <section class="main-section">
+        <div class="cart-main-container">
+            <div class="left-container">
+                <div class="btn-back">
+                    <a href="{% url 'main_store' %}"><ion-icon class="icon-class btn-back-icon" name="chevron-back-outline"></ion-icon></a>
+                    <p>Continue Shopping</p>
+                </div>
+                <div class="btn-sort">
+                    <p>Sort by price</p>
+                    <ion-icon class="icon-class" name="chevron-down-outline"></ion-icon>
+                </div>
+                <div class="items-container">
+
+                    {% for item in items %}
+                    <div class="product-container">
+                        <div class="product-img-container"><img class="product-img" src="{{item.product.image.url}}"></div>
+                        <div class="product-name">{{item.product.name}}</div>
+                        <div class="quantity-box">
+                            <p>{{item.quantity}}</p>
+                            <div class="btn-quantity-adjust">
+                                <ion-icon data-product="{{item.product.id}}" data-action="add" class="icon-class update-cart" name="caret-up-outline"></ion-icon>
+                                <ion-icon data-product="{{item.product.id}}" data-action="remove" class="icon-class update-cart" name="caret-down-outline"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="product-price">Php {{item.product.price|floatformat:2}}</div>
+                        <div class="btn-delete">
+                            <ion-icon data-product="{{item.product.id}}" data-action="remove" class="icon-class update-cart" name="trash-outline"></ion-icon>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="quantity-row">
+                    <p>Quantity</p>
+                    <p>{{order.get_cart_items}}</p>
+                </div>
+                <div class="total-amount-box">
+                    <p>Total</p>
+                    <p>Php {{order.get_cart_total}}</p>
+                </div>
+
+                <a href="{% url 'checkout' %}">
+                    <button class="btn-checkout">
+                            <p>CHECKOUT</p>
+                            <ion-icon class="icon-class" name="chevron-forward-outline"></ion-icon>    
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

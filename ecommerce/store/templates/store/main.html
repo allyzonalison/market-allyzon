@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/second-section.css' %}">
+    <link rel="stylesheet" href="{% static 'css/best-seller.css' %}">
+    <link rel="stylesheet" href="{% static 'css/queries/queries-index.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css/main-shop.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/add-to-cart.css' %}">
+    <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script type="text/javascript">
+        var user = '{{request.user}}'
+
+        function getToken(name) {
+            var cookieValue = null;
+
+            if(document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for(var i =0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+
+                    if(cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getToken('csrftoken');
+    </script>
+
+    <script defer src="{% static 'js/cart.js' %}"></script>
+
+    <title>Market Allyzon</title>
+</head>
+<body>
+    <header class="header">
+        <div class="left-items">
+            <p class="logo"><a href="{% url 'store' %}">Market Allyzon</a></p>
+            <div class="vertical-line"></div>
+            <nav class="main-nav">
+                <ul class="main-nav-list">
+                    <li><a class="links" href="{% url 'main_store' %}">Shop</a></li>
+                    <li><a class="links" href="{% url 'about' %}">About Us</a></li>
+                    <li><a class="links" href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="right-icons">
+            <a href="#"><ion-icon class="icon-class profile-login-icon" name="person-circle-outline"></ion-icon></a>
+            <div class="add-to-cart-box">
+                <a href="{% url 'cart' %}"><ion-icon class="icon-class add-to-cart-icon" name="cart-outline"></ion-icon></a>
+                <p id="cart-total">{{cartItems}}</p>
+            </div>
+        </div>
+    </header>
+   
+        {% block content %}
+
+        {% endblock content %}
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'store/main.html' %}
+
+{% load static %}
+
+{% block content %}
+    <section class="section-about">
+        <div class="about-box">
+            <div class="left-about-container">
+                <img src="{% static 'img/products-img/about-us.png' %}" class="about-img">
+            </div>
+            <div class="right-about-container">
+                <h2 class="about-heading">About Us (me)</h2>
+                <p class="about-desc">
+                    Hello, I created <b>Market Allyzon</b> just for fun. Though, I also want to have 
+                    my own fruits and vegetables online store too XD.<br>
+                    I created everything from scratch. I designed this on my own using Figma, coded the frontend
+                    using HTML/CSS, Javascript while Python Django for the backend.<br>
+                    Hope you like my work! ^_^
+                    <br>
+                    <br>
+                    -aira <b>allyzon</b> claveria
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

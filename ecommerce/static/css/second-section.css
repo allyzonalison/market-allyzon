@@ -1,0 +1,59 @@
+.second-section-box-fresh {
+    padding-top: 5rem;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+}
+
+/* FRUITS BOX */
+.freshy-fruits {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: #FFF4E7;
+}
+
+.left-part-freshy-fruits {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.freshy-fruits-name {
+    font-size: 2.3rem;
+    font-weight: 400;
+    color: #8D703D;
+}
+
+.healthy-food-name {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.freshy-fruits-desc {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.pineapple-img {
+    width: 100%;
+}
+
+.btn-learn-more-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #fff;
+    padding: .75rem 2rem;
+    color: #8D703D;
+    border-radius: 30px;
+}
+
+/* VEGGIE BOX */
+
+.greening {
+    background-color: #CBEACB;
+}

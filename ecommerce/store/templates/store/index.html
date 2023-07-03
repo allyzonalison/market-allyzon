@@ -1,0 +1,105 @@
+{% extends 'store/main.html' %}
+
+{% load static %}
+
+
+{% block content %}
+    <section class="section-hero">
+        <div class="section-hero-box">
+            <img class="main-header-img-head" src="{% static 'img/main-header-img.jpg' %}">
+        </div>
+    </section>
+
+    <main>
+        <section class="second-section">
+            <div class="second-section-box-fresh">
+
+                <div class="freshy-fruits">
+                    <div class="left-part-freshy-fruits">
+                        <div>
+                            <p class="freshy-fruits-name">FRESHY FRUITS</p>
+                            <p class="healthy-food-name">HEALTHY FOOD</p>
+                            <p class="freshy-fruits-desc">Get 60% OFF on selected items</p>
+                        </div>
+                        <div>
+                            <button class="btn-learn-more-1">
+                                <p>LEARN MORE</p>
+                                <ion-icon class="icon-class"name="chevron-forward-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="right-part-freshy-fruits">
+                        <img class="pineapple-img" src="{% static 'img/pineapple-second.png' %}">
+                    </div>
+                </div>
+
+                <div class="freshy-fruits greening">
+                    <div class="left-part-freshy-fruits">
+                        <div>
+                            <p class="freshy-fruits-name">VEGETABLE</p>
+                            <p class="healthy-food-name">GREEN WORLD</p>
+                            <p class="freshy-fruits-desc">Get 40% OFF on selected items</p>
+                        </div>
+                        <div>
+                            <button class="btn-learn-more-1">
+                                <p>LEARN MORE</p>
+                                <ion-icon class="icon-class"name="chevron-forward-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="right-part-freshy-fruits">
+                        <img class="pineapple-img" src="{% static 'img/broco-second.png' %}">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-best-sellers">
+            <div class="best-sellers-box">
+                <p class="best-seller-title">BEST SELLERS</p>
+                <p class="best-seller-desc">Blend in the best of the bests!</p>
+                <div class="best-seller-product-container">
+                    <!--PRODUCT 1-->
+
+                    {% for product in products %}
+                    <div class="best-main-product-box">
+                        <img class="product-img-best" src="{{product.image.url}}">
+                        <div class="product-bott">
+                            <p class="product-name-best">{{product.name}}</p>
+                            <p class="product-price-best">Php {{product.price|floatformat:2}}</p>
+                            <ion-icon class="product-add-to-cart-icon update-cart" data-product="{{product.id}}" data-action="add" name="cart-outline"></ion-icon>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                    <div class="btn-shop-more-box-best">
+                        <a class="links" href="{% url 'main_store' %}">
+                            <button class="btn-shop-more">
+                                <p>SHOP MORE</p>
+                                <ion-icon class="icon-class" name="chevron-forward-outline"></ion-icon>
+                            </button>
+                        </a>
+                    </div>
+            </div>
+        </section>
+
+        <section class="about-footer">
+            <div class="about-footer-box">
+                <div class="left-footer">
+                    <p class="logo">MARKET ALLYZON</p>
+                    <p>Our goal is to provide the most fresh and organic fruits and vegetables to your doorstep</p>
+                </div>
+                <ul class="right-footer">
+                    <li>Metro Manila, Philippines</li>
+                    <li>+6395486532</li>
+                    <li>marketallyzon@support.com.ph</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright &copy; 2022 Aira Allyzon Claveria Design from Scratch</p>
+    </footer>
+
+{% endblock content %}
